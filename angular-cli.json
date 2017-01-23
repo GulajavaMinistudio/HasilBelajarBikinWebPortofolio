@@ -18,9 +18,15 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "./assets/css/bootstrap.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "./assets/js/jquery-3.1.1.js",
+        "./assets/js/jquery.easing.1.3.js",
+        "./assets/js/bootstrap.js",
+        "./assets/js/scrolling.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

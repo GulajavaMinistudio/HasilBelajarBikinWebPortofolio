@@ -1,3 +1,36 @@
-<h1>
-  {{title}}
-</h1>
+<nav id="home">
+  <ul>
+    <li><a href="#"><i class="glyphicon glyphicon-heart img-brands"></i></a></li>
+    <li><a pageScroll href="#home">Home</a></li>
+    <li><a pageScroll href="#about" (click)="goToContact('#about')">About</a></li>
+    <li><a pageScroll href="#portofolio" (click)="goToContact('#portofolio')">Portofolio</a></li>
+    <li><a pageScroll href="#contact" (click)="goToContact('#contact')">Contact</a></li>
+  </ul>
+</nav>
+
+<!--jumbotron-->
+<div class="jumbotron text-center">
+  <img src="assets/img/gambar_prof.png" alt="Profile Picture"
+       class="img-circle img-responsive center-block">
+  <h1>{{nama_orang}}</h1>
+  <p>{{title}}</p>
+</div>
+<!--akhir jumbotron-->
+
+
+<!--about-->
+<app-aboutprofile></app-aboutprofile>
+<!--akhir about-->
+
+<!--daftar portofolio-->
+<app-portofoliolist></app-portofoliolist>
+<!--akhir daftar portofolio-->
+
+<!--kontak pengguna-->
+<app-kontaks id="kontak"></app-kontaks>
+<!--akhir kontak pengguna-->
+
+
+<!--footer website-->
+<app-footerweb></app-footerweb>
+<!--akhir footer website-->

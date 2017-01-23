@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* trik footer agar tetap di bawah */
+html {
+  position: relative;
+}
+
+body {
+  margin-bottom: 120px;
+}
+
+nav {
+  background-color: #364F6B;
+  border: 1px solid #dedede;
+  border-radius: 1px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  color: #888;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+nav > ul > li > a {
+  color: white;
+  display: block;
+  line-height: 56px;
+  padding: 0 24px;
+  text-decoration: none;
+}
+
+nav > ul > li:hover {
+  background-color: rgb(56, 66, 89);
+}
+
+nav > ul > li:hover > a {
+  color: rgb( 255, 255, 255 );
+}
+
+nav > ul > li:hover > a > .caret {
+  border-top-color: rgb( 255, 255, 255 );
+}
+
+.img-brands {
+  color: salmon;
+}
+
+/*class gambar jumbotron*/
+.jumbotron img {
+  width: 200px;
+  border: 5px solid #787878;
+}
+
+.about hr {
+  width: 250px;
+  border-top: 3px solid #999;
+}
+
+.portofolio hr {
+  width: 250px;
+  border-top: 3px solid #999;
+}
+
+.contact hr {
+  width: 250px;
+  border-top: 3px solid #999;
+}
+
+.about {
+  min-height: 300px;
+}
+
+.portofolio {
+  min-height: 600px;
+  background-color: #eee;
+}
+
+.contact {
+  min-height: 800px;
+}
+
+.top-form-textarea {
+  margin-top: 24px;
+}
