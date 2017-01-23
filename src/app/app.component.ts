@@ -1,4 +1,4 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, ElementRef, ViewChild} from '@angular/core';
 import {PageScrollService, PageScrollInstance, PageScrollConfig} from "ng2-page-scroll";
 import {DOCUMENT} from "@angular/platform-browser";
 
@@ -11,6 +11,9 @@ export class AppComponent {
 
   nama_orang = "Rian Yulianto W";
   title = "Android Developer | Web Developer";
+
+  @ViewChild('container')
+  private container: ElementRef;
 
   constructor(private pagescrollservice: PageScrollService,
               @Inject(DOCUMENT) private document: Document) {
@@ -27,8 +30,13 @@ export class AppComponent {
     };
   }
 
-  public goToContact(elID : string): void {
+  public goToHrefTags(elID : string): void {
     let pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, elID);
     this.pagescrollservice.start(pageScrollInstance);
   }
+
+  public goToHeadingInContainer(): void {
+    let pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInlineInstance(this.document, '#home', this.container.nativeElement);
+    this.pagescrollservice.start(pageScrollInstance);
+  };
 }
